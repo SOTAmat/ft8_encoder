@@ -18,7 +18,7 @@ Encoding works for FT8. For encoding there is a console application provided whi
 
 # What to do with it
 
-To build on linus: run `make`. Then run `gen_ft8` (run it without parameters to check what parameters are supported).
+To build on linux: run `make`. Then run `gen_ft8` (run it without parameters to check what parameters are supported).
 
 # References and credits
 
