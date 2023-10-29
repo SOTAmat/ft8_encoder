@@ -15,30 +15,24 @@
 
 void usage()
 {
-    printf("Generate a 15-second WAV file encoding a given message.\n");
+    printf("\nGenerate an array of FSK-8 symbols given an FT8 message.\n");
     printf("Usage:\n");
     printf("\n");
-    printf("gen_ft8 MESSAGE WAV_FILE [FREQUENCY]\n");
+    printf("gen_ft8 \"YOUR_FT8_MESSAGE\"\n");
     printf("\n");
-    printf("(Note that you might have to enclose your message in quote marks if it contains spaces)\n");
+    printf("(Enclose your message in quote marks if it contains spaces)\n");
 }
 
 int main(int argc, char** argv)
 {
     // Expect two command-line arguments
-    if (argc < 3)
+    if (argc < 2)
     {
         usage();
         return -1;
     }
 
     const char* message = argv[1];
-    const char* wav_path = argv[2];
-    float frequency = 1000.0;
-    if (argc > 3)
-    {
-        frequency = atof(argv[3]);
-    }
 
     // First, pack the text data into binary message
     uint8_t packed[FTX_LDPC_K_BYTES];
