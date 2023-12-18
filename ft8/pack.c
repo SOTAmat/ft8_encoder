@@ -31,7 +31,7 @@ int32_t pack28(const char* callsign)
 
     if (starts_with(callsign, "CQ_"))
     {
-        int nnum = 0, nlet = 0;
+        // int nnum = 0, nlet = 0;
 
         // TODO:
     }
@@ -87,8 +87,8 @@ int32_t pack28(const char* callsign)
         return NTOKENS + MAX22 + n28;
     }
 
-    //char text[13];
-    //if (length > 13) return -1;
+    // char text[13];
+    // if (length > 13) return -1;
 
     // TODO:
     // Treat this as a nonstandard callsign: compute its 22-bit hash
@@ -147,7 +147,7 @@ int pack77_1(const char* msg, uint8_t* b77)
     if (s1 == 0)
         return -1;
 
-    const char* call1 = msg; // 1st call
+    const char* call1 = msg;    // 1st call
     const char* call2 = s1 + 1; // 2nd call
 
     int32_t n28a = pack28(call1);
@@ -275,4 +275,3 @@ int pack77(const char* msg, uint8_t* c77)
     packtext77(msg, c77);
     return 0;
 }
-

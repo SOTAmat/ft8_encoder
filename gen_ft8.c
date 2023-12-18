@@ -45,9 +45,9 @@ int main(int argc, char** argv)
     }
 
     int num_tones = FT8_NN;
-    float symbol_period = FT8_SYMBOL_PERIOD;
-    float symbol_bt = FT8_SYMBOL_BT;
-    float slot_time = FT8_SLOT_TIME;
+    // float symbol_period = FT8_SYMBOL_PERIOD;
+    // float symbol_bt = FT8_SYMBOL_BT;
+    // float slot_time = FT8_SLOT_TIME;
 
     // Second, encode the binary message as a sequence of FSK tones
     uint8_t tones[num_tones]; // Array of 79 tones (symbols)
